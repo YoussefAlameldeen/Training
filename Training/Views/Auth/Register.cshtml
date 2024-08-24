@@ -1,0 +1,35 @@
+﻿@model Training.Models.ModelView
+@{
+    ViewData["Registration"] = "AddAccount";
+}
+<h3>
+	<small class="text-body-secondary">Registeration</small>
+</h3>
+<p class="lead">Add Your Account Please.</p>
+
+<form asp-controller="Auth" asp-action="Register">
+    <fieldset>
+        <legend>Legend</legend>
+        <div class="row">
+            <div class="col-sm-10">
+                <label asp-validation-for="Name"  asp-for="Name" class="col-sm-2 col-form-label">Name</label>
+                <label 
+                <input type="text" class="form-control" id="" value="" placeholder="Name" asp-for="Name">
+            </div>
+        </div>
+        <div>
+            <label asp-for="Email" class="form-label mt-4">Email address</label>
+            <input type="email" class="form-control"  aria-describedby="emailHelp" placeholder="Enter email" asp-for="Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div>
+            <label asp-for="Password" class="form-label mt-4">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" autocomplete="off" asp-for="Password">
+        </div>
+        <div>
+            <button type="submit" class="form-control" style="margin-top:10px"> Submit </button>
+
+        </div>
+
+    </fieldset>
+</form>
